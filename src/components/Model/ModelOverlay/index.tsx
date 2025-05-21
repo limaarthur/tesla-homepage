@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from 'react'
+import { useWrapperScroll } from '../useWrapperScroll'
 import { Container } from './styles'
 
 interface ModelOverlayProps {
@@ -6,6 +7,7 @@ interface ModelOverlayProps {
 }
 
 export function ModelOverlay({children}: ModelOverlayProps) {
+  const { scrollY } = useWrapperScroll()
   return (
     <Container>
       {children}
