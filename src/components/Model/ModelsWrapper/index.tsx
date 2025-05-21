@@ -1,8 +1,9 @@
 import { useCallback, useRef, useState, type ReactNode } from 'react'
 import type { CarModel } from '../ModelsContext'
 import ModelsContext from '../ModelsContext'
+import { ModelOverlay } from '../ModelOverlay'
 
-import { Container } from './styles'
+import { Container, OverlayRoots } from './styles'
 
 interface ModelsWrapperProps {
   children: ReactNode
@@ -33,7 +34,15 @@ export function ModelsWrapper({ children }: ModelsWrapperProps) {
         getModelByName
       }}
     >
-      <Container ref={wrapperRef}>{children}</Container>
+      <Container ref={wrapperRef}>
+        <OverlayRoots>
+          {registeredModels.map(item => (
+            <ModelOverlay key={item.modelName}>{item.overlayNode}</ModelOverlay>
+          ))}
+
+        </OverlayRoots>
+        {children}
+      </Container>
     </ModelsContext.Provider>
   )
 }
