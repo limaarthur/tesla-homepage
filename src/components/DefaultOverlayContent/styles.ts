@@ -4,7 +4,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1;
+
+  height: 100vh; // Faz o container ocupar 100% da tela disponível
 `;
 
 export const Heading = styled.div`
@@ -12,24 +13,23 @@ export const Heading = styled.div`
   text-align: center;
 
   > h1 {
-    font-family: 500;
+    font-weight: 700;
     font-size: 2.5rem;
     line-height: 3rem;
-    color: #393c41;
+    color: #e8e6e3;
   }
 
   > h2 {
-    font-weight: normal;
-    font-size: 0.8rem;
+    font-weight: 200;
+    font-size: 1rem;
     line-height: 1.2rem;
-    color: #393c41;
+    color: #e8e6e3;
   }
 `;
 
 export const Buttons = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   align-items: center;
 
   margin-bottom: 8rem;
@@ -57,7 +57,7 @@ export const Buttons = styled.div`
     }
 
     & + button {
-        margin: 0.6rem 0 0;
+      margin: 0.6rem 0 0;
     }
   }
 
