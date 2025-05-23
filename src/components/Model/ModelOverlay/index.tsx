@@ -53,8 +53,13 @@ export function ModelOverlay({ children, model }: ModelOverlayProps) {
     [0, 1, 1, 0]
   )
 
+  const pointerEvents = useTransform(opacity, value => 
+    // Função que permite selecionar o produto - pointer events issue
+    value > 0 ? 'auto' : 'none'
+  )
+
   return (
-    <Container style={{ opacity }}>
+    <Container style={{ opacity, pointerEvents }}>
       {children}
     </Container>
   )
