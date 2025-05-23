@@ -37,7 +37,9 @@ export function ModelsWrapper({ children }: ModelsWrapperProps) {
       <Container ref={wrapperRef}>
         <OverlayRoots>
           {registeredModels.map(item => (
-            <ModelOverlay key={item.modelName}>{item.overlayNode}</ModelOverlay>
+            <ModelOverlay key={item.modelName} model={item}>
+              {item.overlayNode}
+            </ModelOverlay>
           ))}
 
         </OverlayRoots>
