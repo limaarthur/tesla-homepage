@@ -27,3 +27,8 @@ export const Container = styled.div`
   background-position: center;
   }
 `;
+
+export const Spacer = styled.div`
+  height: 15vh;
+  background: #181A1B;
+`;

@@ -10,6 +10,7 @@ export function UniqueOverlay() {
   const { scrollYProgress } = useWrapperScroll() 
 
   const opacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]) // Opacidade ao fazer o scroll 0.9 = 90% e 1 = 100%
+  
   return (
     <Container>
       <Header>

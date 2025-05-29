@@ -2,7 +2,7 @@ import { DefaultOverlayContent } from '../DefaultOverlayContent'
 import { ModelsWrapper, ModelSection } from '../Model'
 import { UniqueOverlay } from '../UniqueOverlay'
 
-import { Container } from './styles'
+import { Container, Spacer } from './styles'
 
 export function Page() {
   return (
@@ -29,6 +29,8 @@ export function Page() {
             />
           ))}
         </div>
+
+        <Spacer />
         <UniqueOverlay />
       </ModelsWrapper>
     </Container>
